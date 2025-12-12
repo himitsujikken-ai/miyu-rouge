@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { getBlogPosts, type Blog } from "@/lib/microcms";
+import { getBlogPosts, type Blog } from "@/lib/cms";
 
 export default async function BlogSection() {
     const { contents } = await getBlogPosts({ limit: 3 });

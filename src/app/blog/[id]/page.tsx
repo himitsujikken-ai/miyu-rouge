@@ -1,4 +1,4 @@
-import { getBlogPost } from "@/lib/microcms";
+import { getBlogPost } from "@/lib/cms";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
