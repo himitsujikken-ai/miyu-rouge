@@ -1,37 +1,39 @@
+import "server-only";
 import { createClient } from "microcms-js-sdk";
 import type { MicroCMSQueries, MicroCMSImage, MicroCMSListResponse } from "microcms-js-sdk";
 
-// Define the client type based on the SDK's createClient return type
-// Define the client type based on the SDK's createClient return type
+// Client type definition
 type ClientType = ReturnType<typeof createClient>;
 
-let client: ClientType;
+// Lazy initialization of the client to avoid build-time errors when env vars are missing
+let client: ClientType | null = null;
 
-try {
+const getClient = (): ClientType => {
+    if (client) return client;
+
     if (!process.env.MICROCMS_SERVICE_DOMAIN || !process.env.MICROCMS_API_KEY) {
-        throw new Error("MicroCMS credentials missing");
+        console.warn("MicroCMS credentials missing. Using mock client for build.");
+        return {
+            getList: async () => {
+                console.warn("MicroCMS mock: getList called");
+                return { contents: [], totalCount: 0, offset: 0, limit: 0 };
+            },
+            getListDetail: async () => {
+                console.warn("MicroCMS mock: getListDetail called");
+                return null;
+            },
+            getObject: async () => null,
+            getAllContentIds: async () => [],
+        } as unknown as ClientType;
     }
+
     client = createClient({
         serviceDomain: process.env.MICROCMS_SERVICE_DOMAIN,
         apiKey: process.env.MICROCMS_API_KEY,
     });
-} catch (error) {
-    console.warn("MicroCMS client initialization failed. Using mock client.", error);
-    client = {
-        getList: async () => {
-            console.warn("MicroCMS mock: getList called");
-            return { contents: [], totalCount: 0, offset: 0, limit: 0 };
-        },
-        getListDetail: async () => {
-            console.warn("MicroCMS mock: getListDetail called");
-            return null;
-        },
-        getObject: async () => null,
-        getAllContentIds: async () => [],
-    } as unknown as ClientType;
-}
 
-export { client };
+    return client;
+};
 
 export type Blog = {
     id: string;
@@ -49,7 +51,7 @@ export type Blog = {
 export type BlogResponse = MicroCMSListResponse<Blog>;
 
 export const getBlogPosts = async (queries?: MicroCMSQueries) => {
-    const detail = await client.getList<Blog>({
+    const detail = await getClient().getList<Blog>({
         endpoint: "blog",
         queries,
     });
@@ -57,7 +59,7 @@ export const getBlogPosts = async (queries?: MicroCMSQueries) => {
 };
 
 export const getBlogPost = async (contentId: string, queries?: MicroCMSQueries) => {
-    const detail = await client.getListDetail<Blog>({
+    const detail = await getClient().getListDetail<Blog>({
         endpoint: "blog",
         contentId,
         queries,
