@@ -6,8 +6,8 @@ export default function Hero() {
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
                 <Image
-                    src="https://images.unsplash.com/photo-1540206395-688085723adb?q=80&w=2574&auto=format&fit=crop" // Nature + Person vibe (hiking/mountains or sea) - Placeholder
-                    alt="Nature landscape with traveler"
+                    src="/images/hero.png"
+                    alt="Travel × Maya - Making Life a Journey"
                     fill
                     className="object-cover"
                     priority
