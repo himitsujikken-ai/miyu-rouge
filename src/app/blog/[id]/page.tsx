@@ -5,7 +5,9 @@ import { notFound } from "next/navigation";
 import { Metadata } from "next";
 
 // Force dynamic rendering if not using generateStaticParams (User didn't ask for SSG specifically, but SSR/ISR is fine. Standard dynamic route)
-export const dynamic = 'force-dynamic';
+// Force dynamic rendering if not using generateStaticParams (User didn't ask for SSG specifically, but SSR/ISR is fine. Standard dynamic route)
+export const revalidate = 60;
+
 
 type Props = {
     params: Promise<{ id: string }>;

@@ -7,6 +7,8 @@ import BlogSection from "@/components/BlogSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 
+export const revalidate = 60;
+
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col">
