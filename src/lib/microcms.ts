@@ -11,8 +11,17 @@ let client: ClientType | null = null;
 const getClient = (): ClientType => {
     if (client) return client;
 
-    if (!process.env.MICROCMS_SERVICE_DOMAIN || !process.env.MICROCMS_API_KEY) {
-        console.warn("MicroCMS credentials missing. Using mock client for build.");
+    // Debug logs as requested
+    console.log("DOMAIN:", process.env.MICROCMS_SERVICE_DOMAIN);
+    console.log("APIKEY:", process.env.MICROCMS_API_KEY ? "Set" : "Not Set");
+
+    try {
+        client = createClient({
+            serviceDomain: process.env.MICROCMS_SERVICE_DOMAIN || "",
+            apiKey: process.env.MICROCMS_API_KEY || "",
+        });
+    } catch (error) {
+        console.warn("MicroCMS client initialization failed (createClient threw). Using mock client.", error);
         return {
             getList: async () => {
                 console.warn("MicroCMS mock: getList called");
@@ -26,11 +35,6 @@ const getClient = (): ClientType => {
             getAllContentIds: async () => [],
         } as unknown as ClientType;
     }
-
-    client = createClient({
-        serviceDomain: process.env.MICROCMS_SERVICE_DOMAIN,
-        apiKey: process.env.MICROCMS_API_KEY,
-    });
 
     return client;
 };
