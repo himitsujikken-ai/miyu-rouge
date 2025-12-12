@@ -11,14 +11,17 @@ let client: ClientType | null = null;
 const getClient = (): ClientType => {
     if (client) return client;
 
-    // Debug logs as requested
-    console.log("DOMAIN:", process.env.MICROCMS_SERVICE_DOMAIN);
-    console.log("APIKEY:", process.env.MICROCMS_API_KEY ? "Set" : "Not Set");
+    // Debug logs to see what's actually being picked up
+    const domain = process.env.MICROCMS_SERVICE_DOMAIN || process.env.NEXT_PUBLIC_MICROCMS_SERVICE_DOMAIN || "";
+    const apiKey = process.env.MICROCMS_API_KEY || process.env.NEXT_PUBLIC_MICROCMS_API_KEY || "";
+
+    console.log("Derived DOMAIN:", domain);
+    console.log("Derived APIKEY:", apiKey ? "Set" : "Not Set");
 
     try {
         client = createClient({
-            serviceDomain: process.env.MICROCMS_SERVICE_DOMAIN || "",
-            apiKey: process.env.MICROCMS_API_KEY || "",
+            serviceDomain: domain,
+            apiKey: apiKey,
         });
     } catch (error) {
         console.warn("MicroCMS client initialization failed (createClient threw). Using mock client.", error);
