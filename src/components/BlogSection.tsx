@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { getBlogPosts } from "@/lib/microcms";
+import { getBlogPosts, type Blog } from "@/lib/microcms";
 
 export default async function BlogSection() {
     const { contents } = await getBlogPosts({ limit: 3 });
@@ -33,9 +33,9 @@ export default async function BlogSection() {
                     </div>
                 ) : (
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {contents.map((post) => (
+                        {contents.map((post: Blog) => (
                             <article key={post.id} className="group cursor-pointer flex flex-col h-full bg-transparent">
-                                <Link href={`#blog-${post.id}`} className="block h-full">
+                                <Link href={`/blog/${post.id}`} className="block h-full">
                                     {/* Image Wrapper with Overflow Hidden for Zoom Effect */}
                                     <div className="relative aspect-[3/2] overflow-hidden rounded-sm mb-4 bg-gray-200">
                                         {post.iCatch ? (
