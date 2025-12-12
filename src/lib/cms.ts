@@ -5,24 +5,21 @@ import type { MicroCMSQueries, MicroCMSImage, MicroCMSListResponse } from "micro
 // Client type definition
 type ClientType = ReturnType<typeof createClient>;
 
+// クライアントを即時作成せず、関数で取得させる
 export const getClient = (): ClientType => {
     const serviceDomain = process.env.MICROCMS_SERVICE_DOMAIN || process.env.NEXT_PUBLIC_MICROCMS_SERVICE_DOMAIN;
     const apiKey = process.env.MICROCMS_API_KEY || process.env.NEXT_PUBLIC_MICROCMS_API_KEY;
 
-    // 鍵がない場合はダミーを返してビルドを落とさない（最重要）
+    // 鍵がない場合でもビルドを落とさないためのダミー（モック）を返す
     if (!serviceDomain || !apiKey) {
-        console.warn("MicroCMS keys are missing. Using mock client.");
+        console.warn("⚠️ MicroCMS keys are missing. Using mock client to prevent build failure.");
         return {
-            getList: async () => {
-                console.warn("MicroCMS mock: getList called");
-                return { contents: [], totalCount: 0, offset: 0, limit: 0 };
-            },
-            getListDetail: async () => {
-                console.warn("MicroCMS mock: getListDetail called");
-                return null;
-            },
-            getObject: async () => null,
-            getAllContentIds: async () => [],
+            get: async () => ({ contents: [], totalCount: 0, offset: 0, limit: 0 }), // User's 'get'
+            getList: async () => ({ contents: [], totalCount: 0, offset: 0, limit: 0 }), // Actual SDK 'getList'
+            getListDetail: async () => null,
+            getAllContents: async () => [],
+            getAllContentIds: async () => [], // Added for completeness
+            getObject: async () => null, // Added to satisfy full interface if needed, relying on 'as any' mostly
         } as unknown as ClientType;
     }
 
