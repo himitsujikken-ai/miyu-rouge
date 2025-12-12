@@ -5,26 +5,13 @@ import type { MicroCMSQueries, MicroCMSImage, MicroCMSListResponse } from "micro
 // Client type definition
 type ClientType = ReturnType<typeof createClient>;
 
-// Lazy initialization of the client to avoid build-time errors when env vars are missing
-let client: ClientType | null = null;
+export const getClient = (): ClientType => {
+    const serviceDomain = process.env.MICROCMS_SERVICE_DOMAIN || process.env.NEXT_PUBLIC_MICROCMS_SERVICE_DOMAIN;
+    const apiKey = process.env.MICROCMS_API_KEY || process.env.NEXT_PUBLIC_MICROCMS_API_KEY;
 
-const getClient = (): ClientType => {
-    if (client) return client;
-
-    // Debug logs to see what's actually being picked up
-    const domain = process.env.MICROCMS_SERVICE_DOMAIN || process.env.NEXT_PUBLIC_MICROCMS_SERVICE_DOMAIN || "";
-    const apiKey = process.env.MICROCMS_API_KEY || process.env.NEXT_PUBLIC_MICROCMS_API_KEY || "";
-
-    console.log("Derived DOMAIN:", domain);
-    console.log("Derived APIKEY:", apiKey ? "Set" : "Not Set");
-
-    try {
-        client = createClient({
-            serviceDomain: domain,
-            apiKey: apiKey,
-        });
-    } catch (error) {
-        console.warn("MicroCMS client initialization failed (createClient threw). Using mock client.", error);
+    // 鍵がない場合はダミーを返してビルドを落とさない（最重要）
+    if (!serviceDomain || !apiKey) {
+        console.warn("MicroCMS keys are missing. Using mock client.");
         return {
             getList: async () => {
                 console.warn("MicroCMS mock: getList called");
@@ -39,7 +26,10 @@ const getClient = (): ClientType => {
         } as unknown as ClientType;
     }
 
-    return client;
+    return createClient({
+        serviceDomain,
+        apiKey,
+    });
 };
 
 export type Blog = {
