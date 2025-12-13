@@ -12,7 +12,8 @@ export default function Hero() {
                     className="object-cover"
                     priority
                 />
-                {/* Overlay removed as per request to show designed image clearly */}
+                {/* Content - Positioned to coordinate with the image art */}
+                <div className="absolute inset-0 bg-white/50 z-0" />
             </div>
 
             {/* Content - Positioned to coordinate with the image art */}

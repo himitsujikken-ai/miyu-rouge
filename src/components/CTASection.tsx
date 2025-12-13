@@ -26,7 +26,7 @@ export default function CTASection() {
 
                     {/* Secondary Action */}
                     <a
-                        href="https://note.com" // Placeholder
+                        href="https://note.com/sawamirei15"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="w-full sm:w-auto bg-white border-2 border-gray-900 text-gray-900 font-bold py-3.5 px-8 rounded-full hover:bg-gray-50 transition-colors"
