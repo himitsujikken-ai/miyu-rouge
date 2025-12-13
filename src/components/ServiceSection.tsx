@@ -23,7 +23,7 @@ const services = [
         subtitle: "ハワイ・国内",
         target: "非日常でリセットしたい方へ",
         description: "美しい景色とエネルギーに触れる旅。心と体を解放し、新しい自分に出会う時間を。",
-        imageUrl: "/images/tabi_rito.png",
+        imageUrl: "/images/top_retreat.jpg",
         link: "/retreat"
     }
 ];
