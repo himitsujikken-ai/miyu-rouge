@@ -32,7 +32,7 @@ export default function Footer() {
                     <div className="space-y-4">
                         <h4 className="font-serif text-lg mb-4">Follow Me</h4>
                         <ul className="space-y-2 text-sm text-gray-600">
-                            <li><a href="https://instagram.com/miyu__rouge" target="_blank" rel="noopener noreferrer" className="hover:text-turquoise transition-colors">Instagram</a></li>
+                            <li><a href="https://www.instagram.com/miyu_stagram72/" target="_blank" rel="noopener noreferrer" className="hover:text-turquoise transition-colors">Instagram</a></li>
                             <li><a href="https://note.com" target="_blank" rel="noopener noreferrer" className="hover:text-turquoise transition-colors">Note</a></li>
                         </ul>
                     </div>

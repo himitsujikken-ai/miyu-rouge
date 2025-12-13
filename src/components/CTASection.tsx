@@ -16,7 +16,7 @@ export default function CTASection() {
                 <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
                     {/* Primary Action */}
                     <a
-                        href="https://line.me" // Placeholder
+                        href="https://line.me/R/ti/p/@785mkoru"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="w-full sm:w-auto bg-[#00B900] text-white font-bold py-4 px-10 rounded-full shadow-lg hover:shadow-xl hover:bg-[#00a000] transition-all transform hover:-translate-y-1"

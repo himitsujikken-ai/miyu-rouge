@@ -37,7 +37,7 @@ export default function ContactPage() {
                     <div className="space-y-6">
                         {/* Official LINE Button */}
                         <a
-                            href="https://line.me/R/ti/p/@00000000" // Placeholder, user needs to update
+                            href="https://line.me/R/ti/p/@785mkoru"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="group relative block w-full bg-[#06C755] text-white font-bold py-5 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden"
@@ -50,7 +50,7 @@ export default function ContactPage() {
 
                         {/* Instagram DM Button */}
                         <a
-                            href="https://instagram.com/miyu__rouge"
+                            href="https://www.instagram.com/miyu_stagram72/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="block w-full bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#FCAF45] text-white font-bold py-5 rounded-xl shadow-md hover:opacity-90 transition-all duration-300"
