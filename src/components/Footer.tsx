@@ -21,6 +21,9 @@ export default function Footer() {
                         <ul className="space-y-2 text-sm text-gray-600">
                             <li><Link href="/" className="hover:text-turquoise transition-colors">Home</Link></li>
                             <li><Link href="/about" className="hover:text-turquoise transition-colors">About</Link></li>
+                            <li><Link href="/session" className="hover:text-turquoise transition-colors">Session</Link></li>
+                            <li><Link href="/course" className="hover:text-turquoise transition-colors">Course</Link></li>
+                            <li><Link href="/retreat" className="hover:text-turquoise transition-colors">Retreat</Link></li>
                             <li><Link href="/blog" className="hover:text-turquoise transition-colors">Blog</Link></li>
                             <li><Link href="/contact" className="hover:text-turquoise transition-colors">Contact</Link></li>
                         </ul>
@@ -29,9 +32,8 @@ export default function Footer() {
                     <div className="space-y-4">
                         <h4 className="font-serif text-lg mb-4">Follow Me</h4>
                         <ul className="space-y-2 text-sm text-gray-600">
-                            <li><a href="#" className="hover:text-turquoise transition-colors">Instagram</a></li>
-                            <li><a href="#" className="hover:text-turquoise transition-colors">Twitter</a></li>
-                            <li><a href="#" className="hover:text-turquoise transition-colors">Note</a></li>
+                            <li><a href="https://instagram.com/miyu__rouge" target="_blank" rel="noopener noreferrer" className="hover:text-turquoise transition-colors">Instagram</a></li>
+                            <li><a href="https://note.com" target="_blank" rel="noopener noreferrer" className="hover:text-turquoise transition-colors">Note</a></li>
                         </ul>
                     </div>
                 </div>
