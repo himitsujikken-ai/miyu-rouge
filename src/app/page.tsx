@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Introduction from "@/components/Introduction";
 import Profile from "@/components/Profile";
+import Concept from "@/components/Concept";
 import ServiceSection from "@/components/ServiceSection";
 import BlogSection from "@/components/BlogSection";
 import CTASection from "@/components/CTASection";
@@ -16,6 +17,7 @@ export default function Home() {
       <Hero />
       <Introduction />
       <Profile />
+      <Concept />
       <ServiceSection />
       <BlogSection />
       <CTASection />
