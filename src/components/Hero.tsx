@@ -12,6 +12,8 @@ export default function Hero() {
                     fill
                     className="object-cover hidden md:block"
                     priority
+                    unoptimized
+                    quality={100}
                 />
                 {/* Mobile Image */}
                 <Image
@@ -20,6 +22,8 @@ export default function Hero() {
                     fill
                     className="object-cover md:hidden"
                     priority
+                    unoptimized
+                    quality={100}
                 />
             </div>
 
