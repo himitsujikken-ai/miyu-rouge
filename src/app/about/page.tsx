@@ -154,7 +154,7 @@ export default function AboutPage() {
                 <div className="max-w-4xl mx-auto flex flex-col md:flex-row gap-12 items-center">
                     <div className="w-full md:w-1/3 aspect-[3/4] relative bg-gray-100">
                         <Image
-                            src="https://images.unsplash.com/photo-1544550285-f813152fb2fd?q=80&w=2574&auto=format&fit=crop"
+                            src="/images/profile.png"
                             alt="Miyu Profile"
                             fill
                             className="object-cover"
