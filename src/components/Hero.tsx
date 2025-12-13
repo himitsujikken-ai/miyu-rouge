@@ -12,20 +12,7 @@ export default function Hero() {
                     className="object-cover"
                     priority
                 />
-                {/* Overlay for text readability and sophisticated look */}
-                <div className="absolute inset-0 bg-black/20 mix-blend-multiply" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-            </div>
-
-            {/* Content */}
-            <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto flex flex-col items-center">
-                <p className="text-sm md:text-base tracking-[0.2em] font-medium mb-6 uppercase drop-shadow-sm">
-                    旅するマヤ暦アドバイザー 美優
-                </p>
-                <h1 className="font-serif text-3xl md:text-5xl lg:text-6xl mb-8 leading-relaxed font-bold tracking-wide drop-shadow-md">
-                    自然体でいることが、<br className="md:hidden" />
-                    一番の導き。
-                </h1>
+                {/* Overlay removed as per request to show designed image clearly */}
             </div>
 
             {/* Scroll Indicator */}
