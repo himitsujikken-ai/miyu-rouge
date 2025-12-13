@@ -6,8 +6,8 @@ export default function Footer() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-left">
                     <div className="col-span-1 md:col-span-2">
-                        <Link href="/" className="font-serif text-2xl tracking-widest block mb-6">
-                            旅するマヤ暦アドバイザー
+                        <Link href="/" className="block mb-6 w-56 mx-auto md:mx-0">
+                            <img src="/images/logo.png" alt="旅するマヤ暦アドバイザー" className="w-full h-auto opacity-90 hover:opacity-100 transition-opacity" />
                         </Link>
                         <p className="text-sm leading-relaxed text-gray-600 max-w-sm mx-auto md:mx-0">
                             旅とマヤ暦を通じて、<br />

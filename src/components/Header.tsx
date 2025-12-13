@@ -9,8 +9,8 @@ export default function Header() {
                 <div className="flex justify-between items-center h-20">
                     {/* Logo */}
                     <div className="flex-shrink-0 flex items-center">
-                        <Link href="/" className="font-serif text-xl sm:text-2xl font-bold tracking-widest text-gray-900 z-50 relative">
-                            旅するマヤ暦アドバイザー
+                        <Link href="/" className="z-50 relative block w-48 h-auto">
+                            <img src="/images/logo.png" alt="旅するマヤ暦アドバイザー" className="w-full h-auto" />
                         </Link>
                     </div>
                     <nav className="hidden md:flex space-x-8">
