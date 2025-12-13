@@ -13,7 +13,7 @@ export default function Profile() {
                             src="/images/profile_v2.jpg"
                             alt="Miyu Sawa"
                             fill
-                            className="object-cover relative z-10 grayscale hover:grayscale-0 transition-all duration-700"
+                            className="object-cover relative z-10 md:grayscale md:hover:grayscale-0 transition-all duration-700"
                         />
                     </div>
 
