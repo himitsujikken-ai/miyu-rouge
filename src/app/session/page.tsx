@@ -18,7 +18,7 @@ export default function SessionPage() {
                 <div className="max-w-3xl mx-auto z-10">
                     <div className="relative w-full max-w-2xl mx-auto mb-8">
                         <Image
-                            src="/images/maya_session.jpg"
+                            src="/images/session_hero_text.png"
                             alt="マヤ暦セッション"
                             width={600}
                             height={200}
