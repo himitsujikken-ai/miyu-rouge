@@ -4,21 +4,27 @@ export default function Hero() {
     return (
         <div className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
             {/* Background Image */}
-            <Image
-                src="/images/top_hero_clean.png"
-                alt="Travel × Maya - Making Life a Journey"
-                fill
-                className="object-cover"
-                priority
-                unoptimized
-                quality={100}
-            />
-
-            {/* Text Overlay */}
-            <div className="absolute inset-0 z-10 flex items-center justify-center">
-                <h1 className="font-serif text-3xl md:text-5xl text-gray-800 tracking-widest font-medium drop-shadow-sm text-center leading-relaxed">
-                    もう一人の自分<br className="md:hidden" />との出会い
-                </h1>
+            <div className="absolute inset-0 z-0">
+                {/* Desktop Image */}
+                <Image
+                    src="/images/hero_desktop.png"
+                    alt="Travel × Maya - Making Life a Journey"
+                    fill
+                    className="object-cover hidden md:block"
+                    priority
+                    unoptimized
+                    quality={100}
+                />
+                {/* Mobile Image */}
+                <Image
+                    src="/images/hero_mobile.png"
+                    alt="Travel × Maya - Making Life a Journey"
+                    fill
+                    className="object-cover md:hidden"
+                    priority
+                    unoptimized
+                    quality={100}
+                />
             </div>
 
             {/* Scroll Indicator */}
