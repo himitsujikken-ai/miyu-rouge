@@ -52,7 +52,7 @@ export default function Concept() {
                         {/* Compass Image Placeholder */}
                         <div className="relative w-full h-64 md:h-80 rounded-2xl overflow-hidden mb-12 shadow-md">
                             <Image
-                                src="https://images.unsplash.com/photo-1590212151179-b14a95570d01?q=80&w=2532&auto=format&fit=crop"
+                                src="/images/concept_compass.png"
                                 alt="Compass and Map"
                                 fill
                                 className="object-cover"
@@ -161,7 +161,7 @@ export default function Concept() {
                     {/* Dawn Image Placeholder */}
                     <div className="relative w-full h-64 md:h-80 rounded-2xl overflow-hidden mb-12 shadow-md">
                         <Image
-                            src="https://images.unsplash.com/photo-1502472584811-0a2f2ca8f953?q=80&w=2669&auto=format&fit=crop"
+                            src="/images/concept_sea.png"
                             alt="Dawn"
                             fill
                             className="object-cover"
