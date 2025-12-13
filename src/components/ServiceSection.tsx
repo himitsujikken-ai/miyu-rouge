@@ -15,7 +15,7 @@ const services = [
         subtitle: "初級〜アドバイザー養成",
         target: "深く学び、仕事にしたい方へ",
         description: "マヤ暦を基礎から学び、自分だけでなく大切な人の人生も紐解けるようになります。",
-        imageUrl: "/images/maya_course.jpg",
+        imageUrl: "/images/top_maya_course.jpg",
         link: "/course"
     },
     {

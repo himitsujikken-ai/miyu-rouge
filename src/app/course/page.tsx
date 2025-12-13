@@ -18,7 +18,7 @@ export default function CoursePage() {
                 <div className="max-w-3xl mx-auto z-10">
                     <div className="relative w-full max-w-2xl mx-auto mb-8">
                         <Image
-                            src="/images/maya_course.jpg"
+                            src="/images/top_maya_course.jpg"
                             alt="マヤ暦講座"
                             width={600}
                             height={200}
