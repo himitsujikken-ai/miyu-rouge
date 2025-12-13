@@ -64,7 +64,7 @@ export default function ServiceSection() {
                                 </p>
                                 <Link
                                     href={service.link}
-                                    className="inline-block border border-gray-900 px-6 py-3 text-sm tracking-widest hover:bg-gray-900 hover:text-white transition-colors duration-300"
+                                    className="inline-block border border-gray-900 px-8 py-3 text-sm tracking-widest rounded-full hover:bg-gray-900 hover:text-white transition-colors duration-300"
                                 >
                                     MORE
                                 </Link>

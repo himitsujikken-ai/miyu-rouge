@@ -89,7 +89,7 @@ export default function CoursePage() {
                                 <p className="font-bold text-gray-900 mb-2">料金</p>
                                 <p>¥44,000 + テキスト代 ¥2,200（税込）</p>
                             </div>
-                            <Link href="/contact" className="block w-full border border-gray-900 text-gray-900 text-center py-4 rounded-lg hover:bg-gray-50 transition-colors duration-300 font-bold tracking-widest text-sm">
+                            <Link href="/contact" className="block w-full border border-gray-900 text-gray-900 text-center py-4 rounded-full hover:bg-gray-900 hover:text-white transition-colors duration-300 font-bold tracking-widest text-sm">
                                 お問い合わせ
                             </Link>
                         </div>
@@ -113,7 +113,7 @@ export default function CoursePage() {
                                 <p className="font-bold text-gray-900 mb-2">料金</p>
                                 <p>¥44,000 + 追補資料代（税込）</p>
                             </div>
-                            <Link href="/contact" className="block w-full border border-gray-900 text-gray-900 text-center py-4 rounded-lg hover:bg-gray-50 transition-colors duration-300 font-bold tracking-widest text-sm">
+                            <Link href="/contact" className="block w-full border border-gray-900 text-gray-900 text-center py-4 rounded-full hover:bg-gray-900 hover:text-white transition-colors duration-300 font-bold tracking-widest text-sm">
                                 お問い合わせ
                             </Link>
                         </div>
@@ -132,7 +132,7 @@ export default function CoursePage() {
                                 プロのマヤ暦アドバイザーとして活動したい方のための認定試験コースです。
                                 試験合格後は、アドバイザーとしてセッションや講座（入門編）を開講できるようになります。
                             </p>
-                            <Link href="/contact" className="block w-full bg-gray-900 text-white text-center py-4 rounded-lg hover:bg-turquoise transition-colors duration-300 font-bold tracking-widest text-sm">
+                            <Link href="/contact" className="block w-full bg-gray-900 text-white text-center py-4 rounded-full hover:bg-turquoise transition-colors duration-300 font-bold tracking-widest text-sm shadow-md hover:shadow-lg">
                                 詳細を聞く
                             </Link>
                         </div>

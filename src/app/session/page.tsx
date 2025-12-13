@@ -93,7 +93,7 @@ export default function SessionPage() {
                                 そして今年の運気の流れ（年回り）まで、総合的に読み解きます。
                                 悩みや迷いがある方、人生の転機を感じている方におすすめです。
                             </p>
-                            <Link href="/contact" className="block w-full bg-gray-900 text-white text-center py-4 rounded-lg hover:bg-turquoise transition-colors duration-300 font-bold tracking-widest text-sm">
+                            <Link href="/contact" className="block w-full bg-gray-900 text-white text-center py-4 rounded-full hover:bg-turquoise transition-colors duration-300 font-bold tracking-widest text-sm shadow-md hover:shadow-lg">
                                 申し込む
                             </Link>
                         </div>
@@ -115,7 +115,7 @@ export default function SessionPage() {
                                 生まれ持ったエネルギー（KINナンバー）を中心に、
                                 あなたの強みや向いていること、魂の方向性をお伝えします。
                             </p>
-                            <Link href="/contact" className="block w-full border border-gray-900 text-gray-900 text-center py-4 rounded-lg hover:bg-gray-50 transition-colors duration-300 font-bold tracking-widest text-sm">
+                            <Link href="/contact" className="block w-full border border-gray-900 text-gray-900 text-center py-4 rounded-full hover:bg-gray-900 hover:text-white transition-colors duration-300 font-bold tracking-widest text-sm">
                                 申し込む
                             </Link>
                         </div>
