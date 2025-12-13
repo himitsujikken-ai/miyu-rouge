@@ -1,19 +1,51 @@
+"use client";
+
 import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 
 export default function Profile() {
+    const [isVisible, setIsVisible] = useState(false);
+    const imageRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                setIsVisible(entry.isIntersecting);
+            },
+            {
+                threshold: 0.5, // Trigger when 50% of the element is visible
+            }
+        );
+
+        if (imageRef.current) {
+            observer.observe(imageRef.current);
+        }
+
+        return () => {
+            if (imageRef.current) {
+                observer.unobserve(imageRef.current);
+            }
+        };
+    }, []);
+
     return (
         <section className="py-24 bg-sand-beige/30">
             <div className="max-w-6xl mx-auto px-6">
                 <div className="flex flex-col md:flex-row items-center gap-12 lg:gap-20">
 
                     {/* Image */}
-                    <div className="w-full md:w-1/2 relative aspect-[3/4] max-w-sm mx-auto md:max-w-none">
+                    <div
+                        ref={imageRef}
+                        className="w-full md:w-1/2 relative aspect-[3/4] max-w-sm mx-auto md:max-w-none"
+                    >
                         <div className="absolute inset-0 bg-white translate-x-4 translate-y-4 border border-sand-dark" />
                         <Image
                             src="/images/profile_v2.jpg"
                             alt="Miyu Sawa"
                             fill
-                            className="object-cover relative z-10 md:grayscale md:hover:grayscale-0 transition-all duration-700"
+                            className={`object-cover relative z-10 transition-all duration-1000 ease-out 
+                                ${isVisible ? "md:grayscale-0" : "md:grayscale"}
+                            `}
                         />
                     </div>
 
