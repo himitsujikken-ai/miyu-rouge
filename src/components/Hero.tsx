@@ -12,20 +12,23 @@ export default function Hero() {
                     className="object-cover"
                     priority
                 />
-                {/* Content - Positioned to coordinate with the image art */}
-                <div className="absolute inset-0 bg-white/50 z-0" />
+                {/* Overlay removed to show image clearly, highlighter style applied to text instead */}
             </div>
 
             {/* Content - Positioned to coordinate with the image art */}
             <div className="relative z-10 w-full px-4 text-center pb-20 md:pb-32">
-                <h1 className="font-serif text-3xl md:text-5xl lg:text-5xl font-bold text-gray-800 drop-shadow-sm leading-tight tracking-[0.2em] mb-8">
-                    “もうひとりの自分”<br className="md:hidden" /> との出会い
+                <h1 className="font-serif text-3xl md:text-5xl lg:text-5xl font-bold text-gray-800 drop-shadow-sm leading-tight tracking-[0.2em] mb-8 inline-block">
+                    <span className="bg-white/60 px-2 py-1 leading-normal box-decoration-clone">
+                        “もうひとりの自分”<br className="md:hidden" /> との出会い
+                    </span>
                 </h1>
-                <p className="font-sans text-sm md:text-base tracking-widest leading-loose text-gray-700 font-medium max-w-4xl mx-auto drop-shadow-sm">
-                    マヤ暦という地図が指し示すのは、<br className="md:hidden" />あなたがまだ知らない、可能性に満ちた<br />
-                    「もうひとりの自分」。<br className="md:hidden" />それは、あなたの最も純粋で、パワフルな姿です。<br />
-                    この出会いが、<br className="md:hidden" />あなたの物語を大きく動かし始めます。
-                </p>
+                <div className="max-w-4xl mx-auto">
+                    <p className="font-sans text-sm md:text-base tracking-widest leading-loose text-gray-800 font-medium drop-shadow-sm inline-block bg-white/60 px-4 py-2 rounded-sm">
+                        マヤ暦という地図が指し示すのは、<br className="md:hidden" />あなたがまだ知らない、可能性に満ちた<br />
+                        「もうひとりの自分」。<br className="md:hidden" />それは、あなたの最も純粋で、パワフルな姿です。<br />
+                        この出会いが、<br className="md:hidden" />あなたの物語を大きく動かし始めます。
+                    </p>
+                </div>
             </div>
 
             {/* Scroll Indicator */}
