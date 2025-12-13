@@ -6,7 +6,7 @@ export default function Hero() {
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
                 <Image
-                    src="/images/top1.png"
+                    src="/images/top_new.jpg"
                     alt="Travel × Maya - Making Life a Journey"
                     fill
                     className="object-cover"
