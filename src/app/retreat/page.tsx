@@ -18,7 +18,7 @@ export default function RetreatPage() {
                 <div className="max-w-3xl mx-auto z-10">
                     <div className="relative w-full max-w-2xl mx-auto mb-8">
                         <Image
-                            src="/images/service_retreat.png"
+                            src="/images/tabi_rito.png"
                             alt="リトリート・旅企画"
                             width={600}
                             height={200}
