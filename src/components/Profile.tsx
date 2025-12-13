@@ -10,7 +10,7 @@ export default function Profile() {
                     <div className="w-full md:w-1/2 relative aspect-[3/4] max-w-sm mx-auto md:max-w-none">
                         <div className="absolute inset-0 bg-white translate-x-4 translate-y-4 border border-sand-dark" />
                         <Image
-                            src="/images/profile.png"
+                            src="/images/profile_v2.jpg"
                             alt="Miyu Sawa"
                             fill
                             className="object-cover relative z-10 grayscale hover:grayscale-0 transition-all duration-700"
