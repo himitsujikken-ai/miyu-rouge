@@ -16,12 +16,16 @@ export default function CoursePage() {
             {/* Hero Section */}
             <div className="relative pt-32 pb-20 md:pt-48 md:pb-32 px-6 flex items-center justify-center bg-sand-beige text-center">
                 <div className="max-w-3xl mx-auto z-10">
-                    <span className="text-turquoise text-sm tracking-widest uppercase font-bold mb-4 block">
-                        Maya Calendar Course
-                    </span>
-                    <h1 className="font-serif text-3xl md:text-5xl font-bold text-gray-900 mb-6 mobile:leading-tight">
-                        マヤ暦講座
-                    </h1>
+                    <div className="relative w-full max-w-2xl mx-auto mb-8">
+                        <Image
+                            src="/images/service_course.png"
+                            alt="マヤ暦講座"
+                            width={600}
+                            height={200}
+                            className="w-full h-auto object-contain"
+                            priority
+                        />
+                    </div>
                     <p className="font-sans text-gray-600 tracking-widest text-sm md:text-base leading-loose">
                         学ぶほどに、人生が深まる。<br className="md:hidden" />
                         古代の叡智を、あなたの手に。
