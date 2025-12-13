@@ -5,11 +5,20 @@ export default function Hero() {
         <div className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
+                {/* Desktop Image */}
                 <Image
-                    src="/images/top_hero_text_v2.png"
+                    src="/images/hero_desktop.png"
                     alt="Travel × Maya - Making Life a Journey"
                     fill
-                    className="object-cover"
+                    className="object-cover hidden md:block"
+                    priority
+                />
+                {/* Mobile Image */}
+                <Image
+                    src="/images/hero_mobile.png"
+                    alt="Travel × Maya - Making Life a Journey"
+                    fill
+                    className="object-cover md:hidden"
                     priority
                 />
             </div>
