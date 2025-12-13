@@ -7,7 +7,7 @@ const services = [
         subtitle: "恋愛・人生のガイド",
         target: "モヤモヤを解消したい方へ",
         description: "あなたの生まれた日のエネルギーを読み解き、本来の役割や才能をお伝えします。",
-        imageUrl: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=2670&auto=format&fit=crop",
+        imageUrl: "/images/service_session.png",
         link: "/session"
     },
     {
@@ -15,7 +15,7 @@ const services = [
         subtitle: "初級〜アドバイザー養成",
         target: "深く学び、仕事にしたい方へ",
         description: "マヤ暦を基礎から学び、自分だけでなく大切な人の人生も紐解けるようになります。",
-        imageUrl: "https://images.unsplash.com/photo-1517842645767-c639042777db?q=80&w=2670&auto=format&fit=crop",
+        imageUrl: "/images/service_course.png",
         link: "/course"
     },
     {
@@ -23,7 +23,7 @@ const services = [
         subtitle: "ハワイ・国内",
         target: "非日常でリセットしたい方へ",
         description: "美しい景色とエネルギーに触れる旅。心と体を解放し、新しい自分に出会う時間を。",
-        imageUrl: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2673&auto=format&fit=crop",
+        imageUrl: "/images/service_retreat.png",
         link: "/retreat"
     }
 ];
