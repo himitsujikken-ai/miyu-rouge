@@ -45,15 +45,17 @@ export default function ServiceSection() {
                     {services.map((service, index) => (
                         <div key={index} className="group bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
                             <div className="relative h-64 overflow-hidden">
-                                <div className="absolute top-0 left-0 bg-turquoise text-white text-xs font-bold px-4 py-2 z-10 z-10">
-                                    {service.target}
-                                </div>
-                                <Image
-                                    src={service.imageUrl}
-                                    alt={service.title}
-                                    fill
-                                    className="object-cover transition-transform duration-700 group-hover:scale-110"
-                                />
+                                <Link href={service.link} className="block w-full h-full">
+                                    <div className="absolute top-0 left-0 bg-turquoise text-white text-xs font-bold px-4 py-2 z-10 z-10">
+                                        {service.target}
+                                    </div>
+                                    <Image
+                                        src={service.imageUrl}
+                                        alt={service.title}
+                                        fill
+                                        className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                    />
+                                </Link>
                             </div>
                             <div className="p-8 flex flex-col flex-grow text-center">
                                 <h3 className="font-serif text-2xl mb-2 text-gray-900">{service.title}</h3>
